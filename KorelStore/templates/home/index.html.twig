@@ -4,15 +4,35 @@
 
 {% block body %}
 
-<main>
-    <section>
-        <div>
-            <h1>
-                Bienvenue sur le site {{ controller_name }} !
-            </h1>
+
+<!-- ///////////////   IMAGE RESPONSIVE  /////////////////-->
+
+<section id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item imghome active">
+        <img class="d-block w-100" src="{{ asset('assets/images/home.jpg') }}" alt="First slide">
         </div>
-    </section>
-</main>
+    </div>
+</section>
+
+<!-- ///////////////   SLOGAN  /////////////////-->
+
+<section class="text-center bg-light py-5">
+    <h1 class="display-4">
+            Optez pour un style <span class="text-info text-uppercase">unique</span>
+    </h1>
+    <p class="text-black-50 lead font-weight-normal">Un large choix de t-shirts et de motifs originaux pour homme et pour femme !</p>
+</section>
+
+<!-- ///////////////  GALERIE NOUVEAUTE  /////////////////-->
+
+<section class="text-center py-5">
+    <h3 class="font-weight-normal text-uppercase">Les dernières <span class="text-info font-weight-bold">Nouveautés</span></h3>
+    <div class="row">
+
+    </div>
+</section>
+
 
 
 
