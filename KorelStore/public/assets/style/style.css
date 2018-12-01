@@ -1,0 +1,17 @@
+/* Style de ma boutique en ligne */
+
+/* ////////////////////////// GENERIQUES ///////////////////////////////*/
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: rgb(235, 235, 235);
+}
+
+/* ////////////////////////// CONTENU ///////////////////////////////*/
