@@ -33,6 +33,11 @@ class Color
      */
     private $link;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $link_woman;
+
     public function __construct()
     {
         $this->tshirts = new ArrayCollection();
@@ -94,6 +99,18 @@ class Color
     public function setLink(string $link): self
     {
         $this->link = $link;
+
+        return $this;
+    }
+
+    public function getLinkWoman(): ?string
+    {
+        return $this->link_woman;
+    }
+
+    public function setLinkWoman(string $link_woman): self
+    {
+        $this->link_woman = $link_woman;
 
         return $this;
     }

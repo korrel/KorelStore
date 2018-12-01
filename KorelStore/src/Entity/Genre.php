@@ -28,16 +28,6 @@ class Genre
      */
     private $price;
 
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Tshirt", mappedBy="genre")
-     */
-    private $tshirts;
-
-    public function __construct()
-    {
-        $this->tshirts = new ArrayCollection();
-    }
-
     public function getId(): ?int
     {
         return $this->id;
@@ -63,37 +53,6 @@ class Genre
     public function setPrice(float $price): self
     {
         $this->price = $price;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|Tshirt[]
-     */
-    public function getTshirts(): Collection
-    {
-        return $this->tshirts;
-    }
-
-    public function addTshirt(Tshirt $tshirt): self
-    {
-        if (!$this->tshirts->contains($tshirt)) {
-            $this->tshirts[] = $tshirt;
-            $tshirt->setGenre($this);
-        }
-
-        return $this;
-    }
-
-    public function removeTshirt(Tshirt $tshirt): self
-    {
-        if ($this->tshirts->contains($tshirt)) {
-            $this->tshirts->removeElement($tshirt);
-            // set the owning side to null (unless already changed)
-            if ($tshirt->getGenre() === $this) {
-                $tshirt->setGenre(null);
-            }
-        }
 
         return $this;
     }

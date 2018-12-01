@@ -46,6 +46,11 @@ class Tshirt
      */
     private $addPrice;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $PriceInit;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -107,6 +112,18 @@ class Tshirt
     public function setAddPrice(float $addPrice): self
     {
         $this->addPrice = $addPrice;
+
+        return $this;
+    }
+
+    public function getPriceInit(): ?int
+    {
+        return $this->PriceInit;
+    }
+
+    public function setPriceInit(int $PriceInit): self
+    {
+        $this->PriceInit = $PriceInit;
 
         return $this;
     }
