@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ controller_name }}{% endblock %}
+
+{% block body %}
+<main>
+    <section>
+        <div class="text-center">
+            <h1>
+                {{ controller_name }}
+            </h1>
+
+            <p>{{ tshirt.id }} | {{ tshirt.couleur }} | {{ tshirt.taille }} | {{ tshirt.motif }}</p>
+
+        </div>
+    </section>
+</main>
+{% endblock %}
