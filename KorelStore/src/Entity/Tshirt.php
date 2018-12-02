@@ -37,19 +37,9 @@ class Tshirt
     private $Size;
 
     /**
-     * @ORM\Column(type="float")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Motif", inversedBy="tshirts")
      */
-    private $initialPrice;
-
-    /**
-     * @ORM\Column(type="float")
-     */
-    private $addPrice;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $PriceInit;
+    private $motif;
 
     public function getId(): ?int
     {
@@ -92,38 +82,14 @@ class Tshirt
         return $this;
     }
 
-    public function getInitialPrice(): ?float
+    public function getMotif(): ?Motif
     {
-        return $this->initialPrice;
+        return $this->motif;
     }
 
-    public function setInitialPrice(float $initialPrice): self
+    public function setMotif(?Motif $motif): self
     {
-        $this->initialPrice = $initialPrice;
-
-        return $this;
-    }
-
-    public function getAddPrice(): ?float
-    {
-        return $this->addPrice;
-    }
-
-    public function setAddPrice(float $addPrice): self
-    {
-        $this->addPrice = $addPrice;
-
-        return $this;
-    }
-
-    public function getPriceInit(): ?int
-    {
-        return $this->PriceInit;
-    }
-
-    public function setPriceInit(int $PriceInit): self
-    {
-        $this->PriceInit = $PriceInit;
+        $this->motif = $motif;
 
         return $this;
     }

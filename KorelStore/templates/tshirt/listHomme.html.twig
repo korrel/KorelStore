@@ -4,13 +4,20 @@
 
 {% block body %}
 <main>
+    
     <section>
         <div class="text-center">
             <h1>
                 {{ controller_name }}
             </h1>
+            <!-- {{ dump(tshirts) }} -->
             {% for tshirt in tshirts %}
-            <p>{{ tshirt.id }} | {{ tshirt.couleur }} | {{ tshirt.taille }} | {{ tshirt.motif }}</p>
+            <p> Couleur : {{ tshirt.color.color }} | 
+                T-shirt pour : {{ tshirt.genre.genre }} | 
+                Nom du motif : {{ tshirt.motif.name }} | 
+                La taille : {{ tshirt.size.size }} 
+                <br>
+                Le prix initial du T-shirt est de {{ tshirt.genre.price }}€ + {{ tshirt.size.price }}€ du prix de taille = {{ tshirt.genre.price + tshirt.size.price }}€ </p>
             <hr>
             {% endfor %}
         </div>
